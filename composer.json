@@ -1,0 +1,40 @@
+{
+    "name": "kawayanmedia/persistence",
+    "description": "Tiny database abstraction used by the Kawayan Media HR packages for their write side",
+    "version": "0.1.0",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "database",
+        "pdo",
+        "persistence",
+        "repository"
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-pdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "suggest": {
+        "ext-pdo_mysql": "Needed by PdoDatabase when connecting to MySQL",
+        "ext-pdo_sqlite": "Needed by PdoDatabase when connecting to SQLite"
+    },
+    "autoload": {
+        "psr-4": {
+            "KawayanMedia\\Persistence\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KawayanMedia\\Persistence\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
